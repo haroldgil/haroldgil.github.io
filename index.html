@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Informatics Innovation</title>
+<title>Page Title</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=JetBrains+Mono&display=swap" rel="stylesheet">
@@ -10,6 +10,13 @@
 
 </head>
 <body>
+
+<div class="flexbox">
+
+<div class="b0">
+</div>
+
+<div>
 
 <table class="mytable" cellspacing="0">
     <tr class="top-row">
@@ -27,6 +34,33 @@
     </tr> <div class="bottom-word"><span class="word">nnovation</span></div>
   </table>
 
+</div>
+
+<div class="b2">
+</div>
+
+<div class="b3">
+</div>
+
+<div class="b4">
+</div>
+
+<div class="b5">
+</div>
+
+<div class="b6">
+</div>
+
+<div class="b7">
+</div>
+
+<div class="b8">
+</div>
+
+<div class="b9">
+</div>
+
+</div>
 
     <style>
     .top-and-left {
@@ -67,8 +101,8 @@
     
     .top-word {
       opacity: 1;
-      position: fixed;
-      top: 6px;
+      position: absolute;
+      top: 91px;
       left: 56px;
 	  font-size: 64px;
       font-family: 'Roboto Mono', sans-serif;
@@ -76,15 +110,74 @@
 
     .bottom-word {
 	  opacity: 1;
-      position: fixed;
-      top: 78px;
+      position: absolute;
+      top: 163px;
       left: 84px;
 	  font-size: 64px;
       font-family: 'Roboto Mono', sans-serif;
 	}
     
     .word {
-      opacity: 0
+      opacity: 0;
+    }
+    
+    .flexbox {
+      flex-direction: column;
+    }
+    
+    .b0 {  
+  	  height: 75px;
+  	  width: 100%;
+      background-color:#161748;
+      margin: 0 0 10px 0;
+    } 
+    
+    .b2 {  
+  	  height: 100px;
+  	  width: 100%;
+      
+    }
+    
+    .b3 {  
+  	  height: 100px;
+  	  width: 100%;
+      background-color:#e5eaf5;
+    }
+    
+    .b4 {  
+  	  height: 100px;
+  	  width: 100%;
+      background-color: white;
+    }
+    
+    .b5 {  
+  	  height: 100px;
+  	  width: 100%;
+      background-color:#d0bdf4;
+    }
+    
+    .b6 {  
+  	  height: 100px;
+  	  width: 100%;
+      background-color: white;
+    }
+    
+    .b7 {  
+  	  height: 100px;
+  	  width: 100%;
+      background-color:#8458B3;
+    }
+    
+    .b8 {  
+  	  height: 100px;
+  	  width: 100%;
+      background-color: white;
+    }
+    
+    .b9 {  
+  	  height: 100px;
+  	  width: 100%;
+      background-color:#494d5f;
     }
     
     </style>
@@ -103,7 +196,7 @@ anime.timeline({loop: false})
     translateY: [0, "1.5em"],
     duration: 250,
     easing: 'linear',
-    delay: 0 /*(el, i) => 50 * i*/
+    delay: 0
   }).add({
     targets: '.word',
     opacity: 1,
@@ -112,7 +205,6 @@ anime.timeline({loop: false})
     delay: (el, i) => 150 * (i+1)
   });
 </script> 
-  
 </body>
 </html>
 
