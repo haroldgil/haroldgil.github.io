@@ -1,20 +1,119 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  </head>
-  <body>
-      <py-script>
-        print("Let's compute π.")
-        def compute_pi(n):
-            pi = 2
-            for i in range(1,n):
-                pi *= 4 * i ** 2 / (4 * i ** 2 - 1)
-            return pi
+<head>
+<title>Informatics Innovation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=JetBrains+Mono&display=swap" rel="stylesheet">
 
-        pi = compute_pi(100000)
-        s = f"π is approximately {pi:.3f}"
-        print(s)
-      </py-script>
-  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+</head>
+<body>
+
+<table class="mytable" cellspacing="0">
+    <tr class="top-row">
+      <td class="bracket top-and-left"></td>
+      <td class="left-col"><span class="zero">0</span></td>
+      <td class="right-col"><span class="zero">0</span></td>
+      <td class="bracket top-and-right"></td>
+    </tr> <div class="top-word"><div class="word">nformatics</div></div>
+
+    <tr class="bottom-row">
+      <td class="bracket bottom-and-left"></td>
+      <td class="left-col">1</td>
+      <td class="right-col">1</td>
+      <td class="bracket bottom-and-right"></td> 
+    </tr> <div class="bottom-word"><span class="word">nnovation</span></div>
+  </table>
+
+
+    <style>
+    .top-and-left {
+      padding: 5px;
+      border-top: thick solid black;
+      border-left: thick solid black;
+    }
+
+    .top-and-right {
+      padding: 5px;
+      border-top: thick solid black;
+      border-right: thick solid black;
+    }
+
+    .bottom-and-left {
+      padding: 5px;
+      border-bottom: thick solid black;
+      border-left: thick solid black;
+    }
+
+    .bottom-and-right {
+      padding: 5px;
+      border-bottom: thick solid black;
+      border-right: thick solid black;
+    }
+    
+    .mytable {
+      font-family: 'JetBrains Mono';
+      font-size: 48px;
+    }
+
+	.zero {
+      font-size: 24px;
+      position: absolute;
+      margin: -10px 0 0 5px;
+      font-family: 'Roboto Mono', sans-serif;
+    }
+    
+    .top-word {
+      opacity: 1;
+      position: fixed;
+      top: 6px;
+      left: 56px;
+	  font-size: 64px;
+      font-family: 'Roboto Mono', sans-serif;
+	}
+
+    .bottom-word {
+	  opacity: 1;
+      position: fixed;
+      top: 78px;
+      left: 84px;
+	  font-size: 64px;
+      font-family: 'Roboto Mono', sans-serif;
+	}
+    
+    .word {
+      opacity: 0
+    }
+    
+    </style>
+    
+<script>
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.bracket',
+    opacity: 0,
+    duration: 1000,
+    easing: "linear",
+    delay: 1000
+  }).add({
+    targets: '.right-col',
+    translateY: [0, "1.5em"],
+    duration: 250,
+    easing: 'linear',
+    delay: 0 /*(el, i) => 50 * i*/
+  }).add({
+    targets: '.word',
+    opacity: 1,
+    duration: 2000,
+    easing: 'linear',
+    delay: (el, i) => 150 * (i+1)
+  });
+</script> 
+  
+</body>
 </html>
+
+
