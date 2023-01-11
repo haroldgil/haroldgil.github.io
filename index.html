@@ -893,5 +893,29 @@ video {
 }
 
     </style>
+    
+  <script>
+anime.timeline({loop: true})
+  .add({
+    targets: '.bracket',
+    borderColor: '#FFF',
+    duration: 1000,
+    easing: "linear",
+    delay: 1000
+  }).add({
+    targets: '.right-col',
+    translateY: [0, "1.5em"],
+    duration: 250,
+    easing: 'linear',
+    delay: 0
+  }).add({
+    targets: '.word',
+    opacity: 1,
+    duration: 1000,
+    easing: 'linear',
+    delay: (el, i) => 150 * (i+1)
+  });
+  </script>
+    
   </body>
 </html>
