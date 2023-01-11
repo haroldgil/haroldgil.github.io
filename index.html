@@ -23,7 +23,7 @@
 
       <div class="h-1 bg-black"></div>
 
-      <div class="flex max-h-[86vh] justify-items-start bg-zinc-50 max-[900px]:max-h-full max-[900px]:flex-col md:lg:flex-row">
+      <div class="flex max-h-[86vh] justify-items-start overflow-auto bg-zinc-50 max-[900px]:max-h-full max-[900px]:flex-col md:lg:flex-row">
         <div>
           <img src="https://github.com/haroldgil/haroldgil.github.io/blob/main/images/DELPH_Headshot_Final_Harold.jpg?raw=true" alt="DELPH_Headshot_Final_Harold.jpg" class="max-h-full" />
         </div>
@@ -812,6 +812,10 @@ video {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .border-l-\[6px\] {
   border-left-width: 6px;
 }
@@ -915,14 +919,14 @@ video {
     }
   }
 }
-  
+ 
     </style>
-    
+
   <script>
 anime.timeline({loop: false})
   .add({
     targets: '.bracket',
-    borderColor: '#FFF',
+    borderColor: '#FAFAFA',
     duration: 1000,
     easing: "linear",
     delay: 1000
@@ -939,7 +943,7 @@ anime.timeline({loop: false})
     easing: 'linear',
     delay: (el, i) => 150 * (i+1)
   });
-  </script>
- 
+  </script>    
+    
   </body>
 </html>
