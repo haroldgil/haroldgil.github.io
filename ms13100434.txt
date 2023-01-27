@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
-  "Domain": "informaticsinnovation.com",
-  "Id": "cdc8bb86-2e38-413d-82db-f9648543db9a"
-}
